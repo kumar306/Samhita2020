@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 // import Logo from '../assets/Samhita-Navbar-Logo.png'
-import Logo from '../assets/samhita22_logo.png'
+import Logo from '../assets/navbar_logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt, faHome, faCalendarDay, faChalkboardTeacher, faUser, faMobileAlt } from '@fortawesome/free-solid-svg-icons'
 class Navbar extends Component {
@@ -32,13 +32,13 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className = 'navbar is-fixed-top has-shadow'>
-                <div className = 'navbar-brand' style = {{display: 'flex', flexDirection: 'row'}}>
+            <nav className = 'navbar is-fixed-top has-shadow' style={{boxShadow: 'box-shadow: 0 10px 10px -9px rgb(5, 247, 239)'}}>
+                <div className = 'navbar-brand has-shadow' style = {{display: 'flex', flexDirection: 'row'}}>
                     <div className = 'navbar-item is-hidden-touch'>                            
-                    <img style = {{cursor: 'pointer'}} onClick = {() => this.redirect('/')} className = 'logo' src = {Logo} alt = "Samhita '20 Logo"/>
+                    <img style = {{cursor: 'pointer' ,height:'200px' , width :'200px'}} onClick = {() => this.redirect('/')} className = 'logo' src = {Logo} alt = "Samhita '22 Logo" />
                     </div>
                     <div className = 'navbar is-hidden-desktop' style = {{alignSelf: 'flex-start', flexBasis: '80%'}}>
-                        <img style = {{cursor: 'pointer'}} onClick = {() => this.redirect('/')} className = 'logo' src = {Logo} alt = "Samhita '20 Logo"/>
+                        <img style = {{cursor: 'pointer'}} onClick = {() => this.redirect('/')} className = 'logo' src = {Logo} alt = "Samhita '22 Logo"/>
                     </div>
                     <div className = 'navbar-item login-shortcut is-hidden-tablet' style = {{cursor: 'pointer', justifySelf: 'center', alignSelf: 'center'}} onClick = {() => this.props.history.push('/login')}>
                         <FontAwesomeIcon className = 'is-size-3' style = {{marginLeft: 'auto', marginRight: 'auto'}} icon = {faSignInAlt} color = 'gray'/>

@@ -2,27 +2,28 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import AOS from 'aos'
-import { Modal } from 'antd'
+import { AutoComplete, Modal } from 'antd'
 import Scroll from 'react-scroll'
 import Navbar from '../components/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons'
 import { faFontAwesomeFlag } from '@fortawesome/free-brands-svg-icons'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import SamhitaLogo from '../assets/New_logo.jpg'
-import SamhitaTicket from '../assets/Ticket.png'
-import ACTLogo from '../assets/Sponsors/Cosponsor.png'
-import WorkshopPartnerImage from '../assets/Sponsors/Workshoppartner.png'
-import KitPartnerImage from '../assets/Sponsors/Kitpartner.png'
-import TechFestPartnerImage from '../assets/Sponsors/Techfestpartner.png'
-import EventPartnerImage from '../assets/Sponsors/Eventpartner.png'
-import CodingPartnerImage from '../assets/Sponsors/Codingpartner.png'
-import DigitalmediaPartnerImage from '../assets/Sponsors/Digitalmediapartner.png'
-import OnlinemediaPartnerImage from '../assets/Sponsors/Onlinemediapartner.png'
-import StartupPartnerImage from '../assets/Sponsors/Startuppartner.png'
-import EducationalPartnerImage from '../assets/Sponsors/Educationalpartner.png'
-import EntertainmentPartnerImage from '../assets/Sponsors/Entertainmentpartner.png'
-import EducationalMediaPartnerImage from '../assets/Sponsors/Educationalmediapartner.png'
+import SamhitaLogo from '../assets/samhita_logo1.png'
+import SamhitaTicket from '../assets/ticket1.png'
+import ACTLogo from '../assets/Sponsors/COSGRID.png'
+import WorkshopPartnerImage from '../assets/Sponsors/COSGRID.png'
+import KitPartnerImage from '../assets/Sponsors/COSGRID.png'
+import TechFestPartnerImage from '../assets/Sponsors/COSGRID.png'
+import EventPartnerImage from '../assets/Sponsors/COSGRID.png'
+import CodingPartnerImage from '../assets/Sponsors/CODECHEF.png'
+import StartupPartnerImage1 from '../assets/Sponsors/HALNODE.png'
+import OnlinemediaPartnerImage from '../assets/Sponsors/MICSET.png'
+import OnlinemediaPartnerImage2 from '../assets/Sponsors/BLACKSHEEP.png'
+import StartupPartnerImage from '../assets/Sponsors/COSGRID.png'
+import EducationalPartnerImage from '../assets/Sponsors/COSGRID.png'
+import EntertainmentPartnerImage from '../assets/Sponsors/COSGRID.png'
+import EducationalMediaPartnerImage from '../assets/Sponsors/COSGRID.png'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -42,11 +43,11 @@ class Home extends Component {
         this.setState({ hash: hash })
         const scroll = Scroll.animateScroll
         scroll.scrollToTop({
-            duration: 200
+            duration: 100
         })
         AOS.init({
             delay: 150,
-            duration: 300,
+            duration: 100,
             once: true
         })
     }
@@ -116,39 +117,41 @@ class Home extends Component {
                         </div>
                     </div>
                     <br></br>
-    
-                    <div className = 'columns is-hidden-touch home-titles is-centered' style = {{marginTop: '50px'}}>
-                        <div className = 'column is-narrow has-text-centered insight-box is-centered'>
-                            <div className = 'badge-1' style = {{cursor: 'pointer'}} onClick = {() => this.props.history.push('/workshops')}>6</div>
-                                <div onClick = {() => this.props.history.push('/workshops')} className = 'title is-1 is-quicksand home-title is-centered' style={{color:'white',cursor: 'pointer',padding:'15px'}}>Workshops</div>
+                    <br></br><br></br>
+                    <div className = 'columns is-hidden-touch home-titles is-centered' >
+                        <div className = 'column is-narrow has-text-centered insight-box is-centered' style = {{height: '20px'}}>
+                            <div className = 'badge-1' style = {{cursor: 'pointer',padding:'0px'}} onClick = {() => this.props.history.push('/workshops')}>6</div>
+                                <div onClick = {() => this.props.history.push('/workshops')} className = 'title is-1 is-quicksand home-title is-centered' style={{color:'white',cursor: 'pointer',padding:'3px',fontSize:'30px'}}>Workshops</div>
                             </div>
                             <div className = 'column is-narrow has-text-centered insight-box is-centered'>
-                                <div className = 'badge-2' style = {{cursor: 'pointer'}} onClick = {() => this.props.history.push('/events')}>20+</div>
-                                    <div onClick = {() => this.props.history.push('/events')} className = 'title is-1 is-quicksand home-title is-centered' style={{color:'white',cursor: 'pointer',padding:'15px'}}>Events</div>
+                                <div className = 'badge-2' style = {{cursor: 'pointer',padding:'0px'}} onClick = {() => this.props.history.push('/events')}>20+</div>
+                                    <div onClick = {() => this.props.history.push('/events')} className = 'title is-1 is-quicksand home-title is-centered' style={{color:'white',cursor: 'pointer',padding:'3px',fontSize:'30px'}}>Events</div>
                             </div>
                             <div className = 'column is-narrow has-text-centered insight-box is-centered'>
-                                <div className = 'badge-3'>30+</div>
-                                    <div onClick = {() => this.props.history.push('/interns')} className = 'title is-1 is-quicksand home-title is-centered' style={{cursor:'pointer',color:'white',padding:'15px'}}>Interns</div>
+                                <div className = 'badge-3'  style = {{padding:'0px'}}>30+</div>
+                                    <div onClick = {() => this.props.history.push('/interns')} className = 'title is-1 is-quicksand home-title is-centered' style={{cursor:'pointer',color:'white',padding:'3px',fontSize:'30px'}}>Interns</div>
                             </div>
                     </div>
-                    <button className = 'hovero button is-hidden-touch is-quicksand is-rounded is-link get-started-button has-text-weight-semibold' style={{color:'black',backgroundColor:'#4ee9d7',fontSize:'10px',fontFamily:'Courier New'}} onClick = {this.handleScroll}>Get started</button>
-                        </div>
+                        <button className = 'hovero button is-hidden-touch is-quicksand is-rounded is-link get-started-button has-text-weight-semibold' style={{color:'black',backgroundColor:'#1d9c9c',fontSize:'10px'}} onClick = {this.handleScroll}>Get started</button>
+                    </div>
                     </div>
                     <section className = 'section ticket-outer-container'>
-                    <div className = 'title is-hidden-tablet is-3 is-lato has-text-centered'>Get started!</div>
+                    <div className = 'title is-hidden-tablet is-3 is-quicksand has-text-centered'>Get started!</div>
                         <div className = 'container'>
-                            <div className = 'columns'>
-                                <div className = 'column '>
+                            <div className = 'columns' style={{paddingBottom:'10px',paddingTop:'10px'}}>
+                                <div className = 'column'>
                                     <div className='hovero'>
-                                        <img data-aos = 'fade-right' id = 'ticket-section' width = {800}  src = {SamhitaTicket} alt= "Samhita '22 ticket" />
+                                        <img data-aos = 'fade-right'style={{height:'420px',width:'900px'}} id = 'ticket-section'  src = {SamhitaTicket} alt= "Samhita '22 ticket" />
                                     </div>
+                                    <br />
+                                    <br />
                                     <div data-aos = 'fade-right' className = 'field'>
                                         <div className = 'control'>
                                             <div className = 'subtitle is-4 is-lato benefits-title' style={{color:'white'}}>
                                                 Ticket benefits include:
                                             <ol className = 'benefits-list'>
                                                 <li>Chance to participate in all technical and non-technical events</li>
-                                                <li>Attend Placement training workshop by GeeksforGeeks</li>
+                                                <li>Attend Placement training workshop </li>
                                                 <li>Beat the queue and stay in front of the pack</li>
                                                 <li>Chance to participate and win Samhita Ambassador contest</li>
                                                 <li>Chance to win gift coupons</li>
@@ -157,7 +160,7 @@ class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className = 'column is-narrow' style = {{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                            <div className = 'column is-narrow' style = {{display: 'flex', flexDirection: 'row', alignItems: 'center',paddingBottom:'200px',paddingRight:'20px'}}>
                                 <div className = 'field'>
                                     <div data-aos = 'fade-right' className = 'control is-hidden-mobile'>
                                         <div className = 'subtitle is-3 is-quicksand' style={{color:'white'}}>
@@ -183,6 +186,54 @@ class Home extends Component {
                         </div>
                     </div>
                 </section>
+{/* 
+<section className = 'section ticket-outer-container'>
+                    <div className = 'title is-hidden-tablet is-3 is-lato has-text-centered'>Get started!</div>
+                        <div className = 'container'>
+                            <div className = 'columns'>
+                                <div className = 'column'>
+                                    <img data-aos = 'fade-right' id = 'ticket-section' width = {800} src = {SamhitaTicket} alt= "Samhita '20 ticket" />
+                                    <div data-aos = 'fade-right' className = 'field'>
+                                        <div className = 'control'>
+                                            <div className = 'subtitle is-4 is-lato benefits-title' style={{color:'white'}}>
+                                                Ticket benefits include:
+                                            <ol className = 'benefits-list'>
+                                                <li>Chance to participate in all technical and non-technical events</li>
+                                                <li>Attend Placement training workshop by GeeksforGeeks</li>
+                                                <li>Beat the queue and stay in front of the pack</li>
+                                                <li>Chance to participate and win Samhita Ambassador contest</li>
+                                                <li>Chance to win gift coupons</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className = 'column is-narrow' style = {{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                                <div className = 'field'>
+                                    <div data-aos = 'fade-right' className = 'control is-hidden-mobile'>
+                                        <div className = 'subtitle is-3 is-quicksand' style={{color:'white'}}>
+                                            Book yours now!
+                                        </div>
+                                        <button className = 'button is-rounded is-lato has-text-weight-semibold' style={{backgroundColor:'#eb9e34',border:'1px solid #eb9e34'}} onClick = {() => this.props.history.push(`/checkout/${encryptedId}`)}>
+                                            <span>Get ticket!</span>
+                                            <span className = 'icon'>
+                                                <FontAwesomeIcon icon = {faArrowRight} />
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div className = 'control is-hidden-tablet'>
+                                        <button className = 'button is-rounded is-lato has-text-weight-semibold is-danger' onClick = {() => this.props.history.push(`/checkout/${encryptedId}`)}>
+                                            <span>Get Ticket!</span>
+                                            <span className = 'icon'>
+                                                <FontAwesomeIcon icon = {faArrowRight} />
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> */}
                 <section className = 'section sponsor-section'>
                     <div className = 'title is-quicksand is-3 has-text-centered' style = {{color: 'black'}}>
                         OUR PARTNERS
@@ -190,7 +241,7 @@ class Home extends Component {
                             <FontAwesomeIcon icon = {faFontAwesomeFlag} color = 'black' />
                         </span>
                     </div>
-                    <div data-aos = 'fade-up' className = 'container sponsors-container'>
+                    {/* <div data-aos = 'fade-up' className = 'container sponsors-container'>
 						<div className = 'columns'>
                             <div className = 'column has-text-centered'>
 								<a href = 'https://www.actcorp.in/' target = '_blank' rel="noopener noreferrer">
@@ -259,9 +310,103 @@ class Home extends Component {
                                 </a>
                             </div>
                         </div>
+                    </div> */}
+
+
+
+
+
+
+
+                        <div data-aos = 'fade-up' className = 'container sponsors-container'>
+						<div className = 'columns'>
+                            <div className = 'column has-text-centered'>
+								<a href = 'https://www.actcorp.in/' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'sponsor image-button act-logo' src = {ACTLogo} alt = 'Co-sponsor - ACT Fibernet'/>
+                                </a>
+                            </div>
+							<div className = 'column has-text-centered'>
+								<a href = 'https://www.poorvikamobile.com/' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' src = {EventPartnerImage} alt = 'Poorvika mobiles - Event partner'/>
+                                </a>
+                            </div>
+                            <div className = 'column has-text-centered'>
+                                <a href = '//' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'sponsor image-button' src = {WorkshopPartnerImage} alt = 'GeeksforGeeks'/>
+                                </a>
+                            </div>
+                        </div>
+                        <div className = 'columns'>
+                            <div className = 'column has-text-centered'>
+                                <a href = 'https://www.halnode.com' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' src = {StartupPartnerImage1} alt = 'Halnode - Startup partner'/>
+                                </a>
+                            </div>
+                            <div className = 'column'>
+                                <a href = 'https://www.cognizance.org.in/' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' style = {{position: 'relative', top: '-2.7px'}} src = {TechFestPartnerImage} alt = 'Cognizance 2020 (IIT Roorkee) - Tech fest partner'/>
+                                </a>
+                            </div>
+                            <div className = 'column'>
+								<a href = 'https://kalvimalar.dinamalar.com/index.asp' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'sponsor image-button kalvimalar' src = {EducationalMediaPartnerImage} alt = 'Kalvimalar - Educational Media Partner'/>
+                                </a>
+                            </div>
+                        </div>
+                        <div className = 'columns'>
+                            <div className = 'column'>
+                                <a href = 'https://www.codechef.com/' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' style = {{position: 'relative', top: '-3px'}}  src = {CodingPartnerImage} alt = 'Codechef - Coding partner'/>
+                                </a>
+                            </div>
+                            {/* <div className = 'column'>
+                                <a href = 'https://yourstory.com/' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' style = {{position: 'relative', top: '10px'}} src = {DigitalmediaPartnerImage} alt = 'Yourstory - Digital media partner'/>
+                                </a>
+                            </div> */}
+                            <div className = 'column'>
+                                <a href = 'https://www.youtube.com/c/BlackSheepTamil' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' src = {OnlinemediaPartnerImage2} alt = 'Micset - Online media partner'/>
+                                </a>
+                            </div>
+                            <div className = 'column'>
+                                <a href = 'https://www.youtube.com/c/MicSet_official' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' src = {OnlinemediaPartnerImage} alt = 'Micset - Online media partner'/>
+                                </a>
+                            </div>
+                        </div>
+                        <div className = 'columns'>
+                            <div className = 'column'>
+                                <a href = 'https://www.uniqtechnologies.co.in/' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' src = {KitPartnerImage} alt = 'Uniq Technologies - Kit partner'/>
+                                </a>
+                            </div>
+                            <div className = 'column'>
+                                <a href = 'https://www.dinamalar.com' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' style = {{position: 'relative', top: '7.7px'}} src = {EducationalPartnerImage} alt = 'Dinamalar - Print partner'/>
+                                </a>
+                            </div>
+                            <div className = 'column has-text-centered'>
+                                <a href = 'http://bingosnacks.com/' target = '_blank' rel="noopener noreferrer">
+                                    <img className = 'image-button sponsor' src = {EntertainmentPartnerImage} alt = 'Bingo - Entertainment partner'/>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
                 </section>
-                <div className = 'samhita-footer has-text-centered'>
+            <div className = 'samhita-footer has-text-centered'>
                     <div className = 'subtitle is-6 is-lato'>
                         © 2022 Samhita WebTeam • All rights reserved • There is no cancellation policy
                     </div>

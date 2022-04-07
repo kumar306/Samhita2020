@@ -65,8 +65,8 @@ hr.new5 {
 }
 
 .navbar {
-	box-shadow: 0px 0px 10px -4px rgba(0,0,0,0.75) !important;
-	background-color:#090a2b
+	box-shadow: 0 10px 10px -9px rgb(5, 247, 239) !important;
+	
 }
 
 .navbar-icon {
@@ -82,7 +82,7 @@ hr.new5 {
 }
 
 .menu-item:hover {
-	background-color: rgb(30, 245, 245);
+	background-color: #090a2b;
 	color: white !important;
 	font-size: 15.5pt !important;
 }
@@ -276,9 +276,9 @@ hr.new5 {
 
 .badge-1 {
 	position: relative;
-	left: 270px;
+	left: 185px;
 	top: 10px;
-	background-color:#4ee9d7;
+	background-color:#1d9c9c;
 	color: black;
 	width: 35px !important;
 	height: 35px !important;
@@ -290,9 +290,9 @@ hr.new5 {
 
 .badge-2 {
 	position: relative;
-	left: 177px;
+	left: 130px;
 	top: 10px;
-	background-color:#4ee9d7;
+	background-color:#1d9c9c;
 	color: black;
 	width: 50px !important;
 	height: 35px !important;
@@ -305,9 +305,9 @@ hr.new5 {
 
 .badge-3 {
 	position: relative;
-	left: 195px;
+	left: 135px;
 	top: 10px;
-	background-color:#4ee9d7;
+	background-color:#1d9c9c;
 	color: black;
 	width: 50px !important;
 	height: 35px !important;
@@ -760,7 +760,8 @@ hr.new5 {
 	}
 
 	.ticket-outer-container {
-		padding-bottom: 6.5rem !important;;
+		padding-bottom: 6.5rem !important;
+
 	}
 
 	.notification {

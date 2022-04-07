@@ -14,6 +14,7 @@ import OfflinePage from './pages/OfflinePage';
 import Profile from './pages/Profile';
 import Ticket from './pages/Ticket';
 import NonTechnical from './pages/NonTechnical';
+import SessionExpired from './pages/SessionExpired';
 
 function App() {
   return (
@@ -24,17 +25,18 @@ function App() {
 		<Online>
 			<Switch>
 				<Route exact path = '/' component = {Home}/>
-				<Route exact path = '/events' component = {Events}/>
-				<Route exact path = '/events/technical' component = {Technical}/>
-				<Route exact path = '/events/non-technical' component = {NonTechnical}/>
-				<Route exact path = '/workshops' component = {Workshops}/>
-				<Route exact path = '/checkout/:id' component = {Ticket}/>
-				<Route exact path = '/login' component = {Login}/>
-				<Route exact path = '/register' component = {Register}/>
-				<Route exact path = '/account' component = {Profile}/>
+				<Route exact path = '/events' component = {StayTuned}/>
+				<Route exact path = '/events/technical' component = {StayTuned}/>
+				<Route exact path = '/events/non-technical' component = {StayTuned}/>
+				<Route exact path = '/workshops' component = {StayTuned}/>
+				<Route exact path = '/checkout/:id' component = {StayTuned}/>
+				<Route exact path = '/login' component = {StayTuned}/>
+				<Route exact path = '/register' component = {StayTuned}/>
+				<Route exact path = '/account' component = {StayTuned}/>
 				<Route exact path = '/stay-tuned' component = {StayTuned}/>
-				<Route exact path = '/contact' component = {Contact}/>
+				<Route exact path = '/contact' component = {StayTuned}/>
 				<Route exact path = '/not-found' component = {Notfound}/>
+				<Route exact path = '/session-expired' component ={StayTuned}/>
 				<Redirect to = '/not-found'/>
 			</Switch>
 		</Online>

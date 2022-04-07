@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-mongoose.connect('connectionString', {
+/*mongoose.connect('connectionString', {
     useUnifiedTopology: true,
     useCreateIndex: true,
     useNewUrlParser: true
-});
+});*/
 const User = require('./models/user');
 const oUser = require('./models/order');
 const sgMail = require('./signup_mail_sender')
